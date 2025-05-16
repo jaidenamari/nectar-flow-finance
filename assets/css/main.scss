@@ -1,0 +1,116 @@
+@import "minima";
+
+// Custom styles
+
+// Colors
+$primary-color: #1E6B3E; // Deep green
+$secondary-color: #FFB52E; // Golden honey
+$text-color: #333333;
+$light-background: #F8F9FA;
+
+// Typography
+body {
+  color: $text-color;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+// Header and Navigation
+.site-header {
+  border-top: 5px solid $primary-color;
+  border-bottom: 1px solid $primary-color;
+}
+
+.site-title {
+  font-weight: 700;
+  letter-spacing: -1px;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Post styling
+.post-list {
+  margin-left: 0;
+  list-style: none;
+  
+  .post-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.post-meta {
+  font-size: 0.9em;
+  color: #828282;
+  margin-bottom: 10px;
+}
+
+.post-link {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.post-excerpt {
+  margin-top: 10px;
+}
+
+// Category styling
+.category-description {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+// Footer
+.site-footer {
+  border-top: 1px solid $primary-color;
+  padding: 30px 0;
+  background-color: $light-background;
+}
+
+// Links
+a {
+  color: $primary-color;
+  
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Responsive design adjustments
+@media screen and (max-width: 600px) {
+  .post-title {
+    font-size: 1.5em;
+  }
+}
+
+// Home page
+.home-banner {
+  background-color: $light-background;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  text-align: center;
+  
+  h2 {
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+} 

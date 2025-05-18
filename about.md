@@ -4,11 +4,9 @@ title: About
 permalink: /about/
 ---
 
-# About Nectar Flow Finance
-
 **Welcome to the hive.**
 
-Nectar Flow Finance is a sanctuary for those who've felt excluded from the financial world—especially queer folks, women, and anyone who's been told money isn't for them. Here, we believe wealth-building should feel as natural as a bee tending to its hive: methodical, communal, and full of sweetness waiting to be unlocked.
+Nectar Flow Finance is a sanctuary for those who've felt excluded from the financial world—especially queer folks, women, and anyone who's been told finances isn't for them. Here, we believe wealth-building should feel as natural as a bee tending to its hive: methodical, communal, and full of sweetness waiting to be unlocked.
 
 Our blog blends **practical financial education** with **nature's wisdom**, breaking down intimidating money concepts into something organic, intuitive, and nourishing. Because financial freedom isn't about rigid rules—it's about planting the right seeds and letting them grow.
 

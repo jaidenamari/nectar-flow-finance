@@ -38,15 +38,15 @@ Most financial advice assumes privilege (high incomes, traditional life paths). 
 
 ## About the Beekeeper
 
-Nectar Flow Finance was founded by Melon, a sproingy queer self taught investor who grew frustrated with finance's elitist culture.
+Nectar Flow Finance was founded by me Melon, a sproingy queer self taught investor who grew frustrated with finance's elitist culture.
 
-As a **[queer person]**, they saw how money systems fail marginalized communities—and how nature's logic offers a better blueprint. The blog started as a passion project but grew into a hive of readers seeking **financial strategies that actually fit their lives**.
+Navigating investing and finance for the first time I was intimidated by all the jargon, feelings of imposter syndrome, and fear of making costly mistakes. I have seen how money systems fail marginalized communities most of my life, and wanted to offer a voice to my decision making process to help us all grow. I take cues from the natural rhythms and life, and felt that nature had some of the best metaphors for preparing for the future. It is a part of our humanity to prepare. The blog started as a passion project but grew into a hive of readers seeking **financial strategies that actually fit their lives**.
 
 ## Join the Hive
 
 **Got questions?** Buzzing with ideas? Reach us at [info@nectarflowfinance.com](mailto:info@nectarflowfinance.com).
 
-**Want to stay connected?** Follow us on **[social media links]** for weekly "nectar drops"—tiny, potent money tips to help your wealth bloom.
+**Want to stay connected?** Follow us on [BlueSky](nectarflowfinance.bsky.app) for weekly "nectar drops"—tiny, potent money tips to help your wealth bloom.
 
 ### 🐝 Why "Nectar Flow"?
 In beekeeping, *nectar flow* is the season when flowers burst with sweetness—the moment bees work hard to store sustenance for the future. That's what we're doing here: helping you gather, protect, and grow your resources, so you're prepared for every season ahead.

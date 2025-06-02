@@ -8,7 +8,7 @@ My name is Melon Garrett and I am the founder of Nectar Flow Finance.
 
 <!-- Eventually put some credentials here, like places I'm featured and links to a press page -->
 
-I started this website in early 2025 to document my own journey towards financial freedom, as well as the trials and tribulations of learning Finance from the ground up. For example my experience trying to learn how to [pay off debt](https://nectarflowfinance.com/debt%20management/2025/03/26/debt-payoff-strategies.html) It seemed valuable to share my insights and tips on personal finance, budgeting, investing and making money. 
+I started this website in early 2025 to document my own journey towards financial freedom, as well as the trials and tribulations of learning Finance from the ground up. For example my experience trying to learn how to [pay off debt](https://nectarflowfinance.com/debt%20management/2025/03/26/debt-payoff-strategies.html). It seemed valuable to share my insights and tips on personal finance, budgeting, investing and making money. 
 
 I have a background in tech with a Bachelors of Science in Cybersecurity, and I work as a Security Engineer and Operations Architect at a small startup called [Lunarbyte](lunarbyte.io). I build the technical infrastructure for startups and small business and I'm passionate about helping founders launch their ideas, and make sustainable products.
 
@@ -47,11 +47,11 @@ Thank you for joining me on this journey
 
 ## Join the Hive
 
-**Got questions?** Buzzing with ideas? Reach us at [info@nectarflowfinance.com](mailto:info@nectarflowfinance.com).
+**Got questions?** Buzzing with ideas? Reach me at [info@nectarflowfinance.com](mailto:info@nectarflowfinance.com).
 
-**Want to stay connected?** Follow us on [BlueSky](nectarflowfinance.bsky.app) for weekly "nectar drops"—tiny, potent money tips to help your wealth bloom.
+**Want to stay connected?** Follow me on [BlueSky](nectarflowfinance.bsky.app) for weekly "nectar drops"—tiny, potent money tips to help your wealth bloom.
 
 <!-- Plug a free E-book (Email capture) Discover the ultimate guide to make extra money from side hustles to small business ideas -->
 
-Author: Melon Garrett -- Hey! I'm Melon, and I am the founder of Nectar Flow Finance. I'm passionate about living life outside of the grind, and ever expanding my knowledge on a multitude of topics which include personal finance, side hustles, making extra money, and starting businesses. I am starting on this finance adventure and am eager for us to grow together.
+Author: Melon Garrett -- Hey! I'm Melon, and I am the founder of Nectar Flow Finance. I'm passionate about living life outside of the grind. I'm always expanding my knowledge on a multitude of topics which include personal finance, side hustles, making extra money, and starting businesses. I am starting on this finance adventure and am eager for us to grow together.
 

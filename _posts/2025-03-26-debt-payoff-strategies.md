@@ -14,7 +14,7 @@ tags:
   - consolidation
   - financial
   - freedom
-featured_image: /images/debt-payoff-strategies.jpg
+featured_image: /assets/images/debt-payoff-strategies.jpg
 seo_title: "Debt Payoff Strategies: How to Become Debt-Free Faster in 2025"
 seo_description: Discover proven debt payoff strategies to eliminate debt faster. Compare debt snowball vs. avalanche methods and find the best debt consolidation options for 2025.
 ---
@@ -59,7 +59,7 @@ These number are not meant to cause dread or shame, but instead they're a baseli
 
 ### Pick a Payoff Plan That Works (for you)
 
-There’s no one-size-fits-all here. Some methods save the most money. Others give you the motivational spark to keep going. I tried a few before finding what actually worked.
+There's no one-size-fits-all here. Some methods save the most money. Others give you the motivational spark to keep going. I tried a few before finding what actually worked.
 
 ### Avalanche Method: Mathematically Ideal
 
@@ -68,7 +68,7 @@ This one made the most sense for me. Pay off the highest interest debt first -- 
 **How it works:**
 1. Pay the minimum on everything.
 2. Put any extra toward the debt with the highest interest rate.
-3. When that’s gone, roll that amount into the next-highest interest debt.
+3. When that's gone, roll that amount into the next-highest interest debt.
 
 Best if you're motivated by numbers and long-term savings. Not so great if you need fast wins to keep up momentum.
 
@@ -90,7 +90,7 @@ Made popular by financial expert Dave Ramsey, the debt snowball method focuses o
 2. Throw extra money at the smallest balance.
 3. Roll that payment into the next-smallest balance.
 
-It’s not mathematically optimal, but seeing progress fast can feel amazing—and keep you going.
+It's not mathematically optimal, but seeing progress fast can feel amazing—and keep you going.
 
 **Research backing:** A 2016 study in the Journal of Consumer Research found that people who used the snowball method were more likely to successfully eliminate their debt than those who focused on high-interest debt first, primarily due to the motivational effect of achieving small wins.
 
@@ -98,28 +98,28 @@ It’s not mathematically optimal, but seeing progress fast can feel amazing—a
 
 ### Hybrid: The Bee's Knees?
 
-Start with a small win (snowball), then switch to the highest interest (avalanche). It’s a mix of psychology and practicality.
+Start with a small win (snowball), then switch to the highest interest (avalanche). It's a mix of psychology and practicality.
 
 This worked well for me when I felt stuck—sometimes a little buzz of progress is worth more than theoretical savings.
 
 ## Should you Consolidate
 
-Maybe. But be careful. I looked into consolidating my student loans and realized I’d lose some protections (like deferred interest on subsidized loans). Not worth it. It's also worth mentioning if you have a lot of debt putting it all together may make interest compound at a faster rate, again, not good.
+Maybe. But be careful. I looked into consolidating my student loans and realized I'd lose some protections (like deferred interest on subsidized loans). Not worth it. It's also worth mentioning if you have a lot of debt putting it all together may make interest compound at a faster rate, again, not good.
 
-But if you’re juggling high-interest credit cards? A solid consolidation loan might help.
+But if you're juggling high-interest credit cards? A solid consolidation loan might help.
 ### Good Options:
 
 - [SoFi Personal Loans](https://www.sofi.com/personal-loans/) – no fees, decent rates
 - [LightStream](https://www.lightstream.com/) – fast, flexible
 - [Marcus by Goldman Sachs](https://www.marcus.com/us/en/loans/personal-loans) – straightforward terms
 
-If you go this route, make sure the rate is actually lower and that you don’t rack up new debt after consolidating.
+If you go this route, make sure the rate is actually lower and that you don't rack up new debt after consolidating.
 
 #### Balance Transfer Cards
 
 **How it works:** Transfer high-interest credit card balances to a new card with a low or 0% introductory APR period.
 
-**Best for:** These can work _if_ you’re organized and can pay it off during the promo period. Otherwise, the interest hits hard, and you're likely no better off.
+**Best for:** These can work _if_ you're organized and can pay it off during the promo period. Otherwise, the interest hits hard, and you're likely no better off.
 
 **Top options for 2025:**
 - [Chase Slate Edge℠](https://creditcards.chase.com/a1/slatedge/compare) <!-- AFFILIATE LINK: Chase -->: 0% intro APR for 18 months, 3% balance transfer fee

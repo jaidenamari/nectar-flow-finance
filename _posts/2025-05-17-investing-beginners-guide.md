@@ -1,7 +1,7 @@
 ---
 title: "Investing for Beginners: A Step-by-Step Guide to Building Wealth in 2025"
 date: 2025-05-17
-author: Finance Blog Team
+author: Melon
 category: Investing
 tags:
   - investing
@@ -16,8 +16,6 @@ featured_image: /images/investing-beginners-guide.jpg
 seo_title: "Investing for Beginners: Complete Guide to Start Investing in 2025"
 seo_description: Learn how to start investing with our comprehensive beginner's guide. Discover the best investment options, platforms, and strategies to build wealth in 2025.
 ---
-
-# Investing for Beginners: A Step-by-Step Guide to Building Wealth in 2025
 
 The world of investing can seem intimidating at first glance—filled with complex terminology, countless options, and the ever-present fear of losing money. However, investing remains one of the most powerful tools for building long-term wealth and achieving financial independence. This comprehensive guide will walk you through everything you need to know to start your investing journey with confidence in 2025.
 
@@ -54,7 +52,7 @@ Your time horizon—how long until you need the money you're investing—signifi
 
 ### Asset Allocation
 
-Asset allocation refers to how you divide your investments among different asset classes like stocks, bonds, and cash. Your ideal allocation depends on your risk tolerance, time horizon, and financial goals. A common starting point is subtracting your age from 110 to determine your stock percentage (e.g., a 30-year-old might aim for 80% stocks, 20% bonds).
+Asset allocation refers to how you divide your investments among different asset classes like stocks, bonds, and cash. Your ideal allocation depends on your risk tolerance, time horizon, and financial goals. A common starting point is subtracting your age from 110 to determine your stock percentage (e.g., a 30-year-old might aim for 80% stocks, 20% bonds). I personally found that I like to balance my portfolio a bit more aggressively, but I started investing at 33, so Im a bit late to the game. I'm open to higher levels or risk. 
 
 ## Setting Up Your Investment Foundation
 
@@ -62,18 +60,18 @@ Before investing your first dollar, ensure these financial fundamentals are in p
 
 ### 1. Establish an Emergency Fund
 
-Before investing, build an emergency fund covering 3-6 months of essential expenses. Keep this in a high-yield savings account like [Ally Bank](https://www.ally.com) <!-- AFFILIATE LINK: Ally Bank --> or [Marcus by Goldman Sachs](https://www.marcus.com) <!-- AFFILIATE LINK: Marcus by Goldman Sachs -->, which currently offer rates around 3.75% APY.
+Before investing, build an emergency fund covering 3-6 months of essential expenses. Keep this in a high-yield savings account like [Ally Bank](https://ally.com/referral?code=6F4D6X6W2Z "https://ally.com/referral?code=6F4D6X6W2Z")<!-- AFFILIATE LINK: Ally Bank --> or [Marcus by Goldman Sachs](https://www.marcus.com) <!-- AFFILIATE LINK: Marcus by Goldman Sachs -->, which currently offer rates around 3.75% APY. I also have been enjoying using [Wealthfront's Cash Account](https://www.wealthfront.com/c/affiliates/invited/AFFC-TM6E-KT9A-PZJG) which has a promotional 4.5% APY for three months, then it reduces to 4.0. Full discloser I included my referral link to Wealthfront which keeps my account boosted to 4.5%. 
 
 ### 2. Pay Off High-Interest Debt
 
-Eliminate high-interest debt (particularly credit cards) before investing significantly. The guaranteed "return" from avoiding 18-25% interest charges typically exceeds what you can reasonably expect from investments.
+Eliminate high-interest debt (particularly credit cards) before investing significantly. The guaranteed "return" from avoiding 18-25% interest charges typically exceeds what you can reasonably expect from investments. You can check out my other article that breaks down [debt payoff strategies](https://nectarflowfinance.com/debt%20management/2025/03/26/debt-payoff-strategies.html)
 
 ### 3. Understand Your Financial Goals
 
 Define clear, specific investment goals with timeframes:
-- Short-term (1-3 years): Vacation, down payment on a car
+- Short-term (1-3 years): Vacation, down payment on a car, buy a sword
 - Medium-term (3-10 years): Home down payment, education
-- Long-term (10+ years): Retirement, financial independence
+- Long-term (10+ years): Retirement, financial independence, building wealth
 
 ### 4. Determine Your Risk Tolerance
 
@@ -205,6 +203,10 @@ Platforms like [M1 Finance](https://www.m1finance.com) <!-- AFFILIATE LINK: M1 F
 ## Building Your Investment Strategy
 
 With the fundamentals covered, let's construct a practical investment strategy:
+
+TODO:
+- [ ] Update this to actually follow my approach. While a lot of people like stock and bond blend. I think this is entirely dependent on the stage of life one is at. I think following a three ETF portfolio where we target foundational (total stock), Growth (SCHG, QQQ), and Dividend (SCHD, etc), can lead to better overall performance. 
+- [ ] This is going to be a low level approach. We are mostly trying to suggest the best accounts for circumstances and encourage readers to get started. That's the whole deal with investing. The sooner you get started the better. 
 
 ### Step 1: Define Your Asset Allocation
 

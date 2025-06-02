@@ -6,5 +6,6 @@ vendor
 .docs
 .obsidian
 .temp
+.cursor/rules
 _posts/Planning
 _posts/Branding

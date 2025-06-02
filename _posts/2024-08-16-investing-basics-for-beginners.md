@@ -1,11 +1,20 @@
 ---
 layout: post
-title:  "Investing Basics: Where to Start When You're New to the Market"
-date:   2024-08-16 20:28:00 -0700
-categories: [investing, beginners]
+title: "Investing Basics: Where to Start When You're New to the Market"
+date: 2024-08-16 20:28:00 -0700
+author: Melon
+category: Investing
+tags:
+  - investing
+  - beginners
+  - basics
+  - getting
+  - started
+  - market
+featured_image: /images/investing-basics-beginners.jpg
+seo_title: "Investing Basics for Beginners: Where to Start in the Stock Market"
+seo_description: Learn investing basics for beginners. Discover how to start investing in the stock market with simple strategies, index funds, and step-by-step guidance.
 ---
-
-# Investing Basics: Where to Start
 
 Investing can seem intimidating if you're just getting started, but it doesn't have to be. This guide will help you understand the fundamentals of investing and provide a clear path forward.
 

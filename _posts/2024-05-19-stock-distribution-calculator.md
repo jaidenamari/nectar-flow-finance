@@ -5,8 +5,6 @@ date: 2024-05-19 12:00:00 -0700
 categories: [Tools, Investing]
 ---
 
-# Stock Distribution Calculator
-
 Use this calculator to determine how to distribute investment funds across different stocks or asset classes to maintain your target allocations. Simply enter your investment amount and set up your desired allocation percentages.
 
 <div class="calculator-container">

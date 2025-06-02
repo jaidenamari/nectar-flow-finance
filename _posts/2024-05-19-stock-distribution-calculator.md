@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stock Distribution Calculator: Balance Your Portfolio"
-date: 2024-05-19 12:00:00 -0700
+date: 2025-05-19
 categories: [Tools, Investing]
 ---
 

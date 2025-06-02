@@ -134,7 +134,7 @@ You can checkout my article on[ investing basics](https://nectarflowfinance.com/
 
 ## Sustainable Investing That Reflects You
 
-If you’re queer, femme, disabled, or just deeply skeptical of systems that weren’t built for you. Then traditional investing advice might feel alienating.
+If you’re queer, femme, disabled, or just deeply skeptical of systems that weren’t built with you in mind. Then traditional investing advice might feel alienating.
 
 But sustainable investing? It can be a reclamation. A way to participate in capitalism _on your own terms and nudge the system in a better direction as you go.
 

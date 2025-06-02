@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-TODO: update this to include a bit more of the brand identity, and to include some links to other articles I've written, and any courses, affiliate marketing plugs, and a free book. (that's all down the road goals. For now It can be simple)
-
 My name is Melon Garrett and I am the founder of Nectar Flow Finance. 
 
 <!-- Eventually put some credentials here, like places I'm featured and links to a press page -->

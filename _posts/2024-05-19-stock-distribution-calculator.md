@@ -13,12 +13,15 @@ Use this calculator to determine how to distribute investment funds across diffe
   <form id="stockDistributionForm">
     <div class="input-group">
       <label for="totalAmount">Total Investment Amount ($):</label>
-      <input type="number" id="totalAmount" min="1" step="1" required>
+      <input type="number" id="totalAmount" min="0.01" step="0.01" required>
     </div>
     
     <div id="allocations">
       <h3>Allocations</h3>
-      <p class="note">Total allocation must equal 100%</p>
+      <div class="allocation-summary">
+        <p class="note">Total allocation must equal 100%</p>
+        <p class="running-total">Current total: <span id="runningTotal">0</span>%</p>
+      </div>
       
       <div class="allocation-row">
         <div class="input-group">
@@ -27,7 +30,7 @@ Use this calculator to determine how to distribute investment funds across diffe
         </div>
         <div class="input-group">
           <label for="percentage-1">Allocation (%):</label>
-          <input type="number" id="percentage-1" min="1" max="100" required>
+          <input type="number" id="percentage-1" min="0" max="100" step="0.01" required>
         </div>
         <button type="button" class="remove-btn hidden" data-row="1">×</button>
       </div>
@@ -56,8 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const resultsDiv = document.getElementById('results');
   const distributionResults = document.getElementById('distributionResults');
   const totalPercentageSpan = document.getElementById('totalPercentage');
+  const runningTotalSpan = document.getElementById('runningTotal');
   
   let rowCount = 1;
+  let runningTotal = 0;
   
   // Add new allocation row
   addRowBtn.addEventListener('click', function() {
@@ -72,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
       <div class="input-group">
         <label for="percentage-${rowCount}">Allocation (%):</label>
-        <input type="number" id="percentage-${rowCount}" min="1" max="100" required>
+        <input type="number" id="percentage-${rowCount}" min="0" max="100" step="0.01" required>
       </div>
       <button type="button" class="remove-btn" data-row="${rowCount}">×</button>
     `;
@@ -86,7 +91,41 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add event listener to new remove button
     newRow.querySelector('.remove-btn').addEventListener('click', removeRow);
+    
+    // Add event listener to new percentage input
+    newRow.querySelector('input[id^="percentage-"]').addEventListener('input', updateRunningTotal);
   });
+  
+  // Initialize percentage input event listener for the first row
+  document.getElementById('percentage-1').addEventListener('input', updateRunningTotal);
+  
+  // Update running total
+  function updateRunningTotal() {
+    const allocationRows = document.querySelectorAll('.allocation-row');
+    let total = 0;
+    
+    allocationRows.forEach(row => {
+      const percentageInput = row.querySelector('input[id^="percentage-"]');
+      const value = parseFloat(percentageInput.value) || 0;
+      total += value;
+    });
+    
+    runningTotal = total;
+    runningTotalSpan.textContent = total.toFixed(2);
+    
+    // Add visual feedback
+    if (Math.abs(total - 100) < 0.01) {
+      runningTotalSpan.classList.add('total-valid');
+      runningTotalSpan.classList.remove('total-invalid');
+    } else {
+      runningTotalSpan.classList.remove('total-valid');
+      if (total > 100) {
+        runningTotalSpan.classList.add('total-invalid');
+      } else {
+        runningTotalSpan.classList.remove('total-invalid');
+      }
+    }
+  }
   
   // Remove allocation row
   function removeRow(e) {
@@ -98,6 +137,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (rowCount === 1) {
       document.querySelector('.remove-btn').classList.add('hidden');
     }
+    
+    // Update running total after removing a row
+    updateRunningTotal();
   }
   
   // Calculate distribution
@@ -107,7 +149,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalAmount = parseFloat(document.getElementById('totalAmount').value);
     const allocationRows = document.querySelectorAll('.allocation-row');
     const results = [];
-    let totalPercentage = 0;
+    
+    // No need to recalculate totalPercentage since we're tracking it in runningTotal
+    let totalPercentage = runningTotal;
     
     allocationRows.forEach(row => {
       const tickerId = row.querySelector('input[id^="ticker-"]').id;
@@ -115,15 +159,13 @@ document.addEventListener('DOMContentLoaded', function() {
       
       const ticker = document.getElementById(tickerId).value;
       const percentage = parseFloat(document.getElementById(percentageId).value);
-      
-      totalPercentage += percentage;
       const amount = (percentage / 100) * totalAmount;
       
       results.push({ ticker, percentage, amount });
     });
     
     // Display results
-    totalPercentageSpan.textContent = totalPercentage;
+    totalPercentageSpan.textContent = totalPercentage.toFixed(2);
     
     if (Math.abs(totalPercentage - 100) > 0.01) {
       alert('Total allocation must equal 100%. Please adjust your percentages.');
@@ -136,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
       resultRow.className = 'result-row';
       resultRow.innerHTML = `
         <div class="ticker">${result.ticker}</div>
-        <div class="percentage">${result.percentage}%</div>
+        <div class="percentage">${result.percentage.toFixed(2)}%</div>
         <div class="amount">$${result.amount.toFixed(2)}</div>
       `;
       distributionResults.appendChild(resultRow);
@@ -246,6 +288,32 @@ button {
   color: #666;
   margin-top: -5px;
   margin-bottom: 15px;
+}
+
+.allocation-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.running-total {
+  font-weight: 600;
+  margin: 0;
+}
+
+#runningTotal {
+  display: inline-block;
+  min-width: 40px;
+  text-align: right;
+}
+
+.total-valid {
+  color: #1E6B3E;
+}
+
+.total-invalid {
+  color: rgb(238, 69, 89);
 }
 </style>
 

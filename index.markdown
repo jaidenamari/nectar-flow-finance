@@ -7,4 +7,4 @@ title: Nectar Flow Finance
 subheading: Simple finance advice for everyday wealth building
 ---
 
-Welcome to Nectar Flow Finance, where we believe that building wealth shouldn't be complicated. Explore our articles for straightforward, practical financial advice that works for real people.
+Hello and welcome to Nectar Flow Finance, where I believe that building wealth shouldn't be complicated. Explore articles for straightforward, practical financial advice that works for real people.

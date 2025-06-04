@@ -27,7 +27,6 @@ For me I like to figure out how to do things on my own. I'm cheap as heck, and i
 
 I made this as the guide I wish I had when I became self-employed and had to start paying estimated quarterly taxes.
 
----
 
 ## So… What Even Are Estimated Taxes?
 
@@ -38,7 +37,6 @@ If you're self-employed, the IRS expects you to pay taxes as you earn income. No
 
 If you make at least **$400 in self-employment income**, you're on the hook for self-employment tax. If you expect to owe **at least $1,000 in total taxes**, you're supposed to pay quarterly.
 
----
 
 ## The Due Dates You Need to Know (2025 Edition)
 
@@ -49,7 +47,6 @@ If you make at least **$400 in self-employment income**, you're on the hook for 
     
 If you file your 2025 tax return and pay your entire balance by **January 31, 2026**, you can skip the Q4 payment. But only if you're early and on top of it.
 
----
 
 ## Safe Harbor: The IRS's Version of "Close Enough"
 
@@ -62,9 +59,8 @@ You're in the clear if you either:
 
 Pick the easier one, and aim for that in your quarterly payments.
 
----
 
-## Real-Life Case Studies
+## Case Studies
 
 ### 1. Married, Self-Employed, Filing Jointly – $120K Income
 
@@ -82,7 +78,6 @@ They automate $3,500 payments from a joint business savings account (more on tha
 
 **Smart move:** They put their "tax savings" in a high-yield savings account between quarters. That extra interest? Helps cover software fees and coffee.
 
----
 
 ### 2. Single Freelancer – $63K Income
 
@@ -101,7 +96,6 @@ Jo uses a simple rule: 25% of every client payment goes into a tax bucket. It's 
 
 **Pro tip from Jo:** "I named my tax account 'IRS Troll Toll' so I feel less bitter when I move money into it."
 
----
 
 ## How to Actually Calculate It (Without Crying)
 
@@ -113,7 +107,6 @@ Jo uses a simple rule: 25% of every client payment goes into a tax bucket. It's 
 
 Yes, it's math. But it's survivable. You can also use [IRS Form 1040-ES](https://www.irs.gov/forms-pubs/about-form-1040-es) for worksheets if you like official stuff, or use my [**free 2025 Estimated Tax Calculator**]({% post_url 2025-01-15-estimated-tax-calculator %}) - it walks you through everything in plain English and does all the math for you!
 
----
 
 ## Tips That Actually Help
 
@@ -122,7 +115,6 @@ Yes, it's math. But it's survivable. You can also use [IRS Form 1040-ES](https:/
 - **Treat tax time like a client deadline.** Put it on your calendar, and don't ghost it.
 - **Track your income monthly.** Use a spreadsheet, a notepad, YNAB, whatever works. Just check in.
 
----
 
 ## Wrapping It Up
 

@@ -81,7 +81,7 @@ They automate $3,500 payments from a joint business savings account (more on tha
 
 ### 2. Single Freelancer – $63K Income
 
-**Meet Ganymede.** Ganymede is a writer, working with multiple clients, and just hit their stride after a slow winter. They expect to earn about $63,000 in 2025.
+**Meet Geralt.** Geralt is a writer, working with multiple clients, and just hit their stride after a slow winter. They expect to earn about $63,000 in 2025.
 
 - In 2024, they paid $7,200 in taxes.
 - This year they're aiming to pay **90% of their projected 2025 taxes**, which they estimate will be about $8,200.
@@ -92,9 +92,9 @@ They automate $3,500 payments from a joint business savings account (more on tha
 - $8,200 ÷ 4 = $2,050 per quarter
     
 
-Jo uses a simple rule: 25% of every client payment goes into a tax bucket. It's not perfect, but it means Jo never ends up panicking at deadline time.
+Geralt uses a simple rule: 25% of every client payment goes into a tax bucket. It's not perfect, but it means Geralt never ends up panicking at deadline time.
 
-**Pro tip from Jo:** "I named my tax account 'IRS Troll Toll' so I feel less bitter when I move money into it."
+**Pro tip:** I named my tax account 'IRS Troll Toll' so I feel less bitter when I move money into it.
 
 
 ## How to Actually Calculate It (Without Crying)

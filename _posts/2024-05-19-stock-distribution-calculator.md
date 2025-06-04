@@ -4,6 +4,9 @@ title: "Stock Distribution Calculator: Balance Your Portfolio"
 date: 2025-05-19
 categories: [Tools, Investing]
 ---
+I created this calculator because I was often left scratching my head trying to figure out how much to allocate to each stock and maintain my meticulously balanced portfolio. Maybe It's a bit overboard to be so fractional about it, but when I have the option to invest by dollars rather than whole shares, I like to neatly organize my investments.
+
+The scenario I often use this the most is with my Fidelity brokerage account. When I use my credit card I get 2% cash back, and it gets auto redeemed to my brokerage. I then go in every month and invest whatever kickback I got by percentage. 
 
 Use this calculator to determine how to distribute investment funds across different stocks or asset classes to maintain your target allocations. Simply enter your investment amount and set up your desired allocation percentages.
 

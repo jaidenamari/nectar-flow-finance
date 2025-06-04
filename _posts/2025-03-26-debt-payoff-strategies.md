@@ -28,7 +28,7 @@ Around the same time I had a medial emergency, and in all the kerfuffle I was ta
 Eventually I clawed my way back to stability. And many years later I made it back to University to graduate. No matter how much I willed it the debt didn't magically vanish, it lingered like a stubborn stain on my favorite shirt. What eventually helped was getting serious about paying it off. I picked a payoff strategy and stuck with it.
 
 If you're dealing with credit cards, student loans, car payments, or all of the above, then you and I have something in common. Here is the guide to what I've learned. Not everything I mention will universally apply to everyone, but these are the tools and ideas that have helped me to become debt free.
-## Step One: Face the Numbers
+## Face the Numbers
 
 Before diving into specific strategies, it's essential to get a clear picture of your current debt landscape. This foundation will help you make informed decisions about which approach will work best for you.  
 

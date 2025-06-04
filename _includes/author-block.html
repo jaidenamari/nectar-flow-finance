@@ -1,0 +1,98 @@
+<div class="author-block">
+  <div class="author-content">
+    {% if include.image %}
+      <div class="author-image">
+        <img src="{{ include.image }}" alt="{{ include.name | default: 'Melon Amari' }}" />
+      </div>
+    {% endif %}
+    <div class="author-info">
+      <h4 class="author-name">{{ include.name | default: "Melon Amari" }}</h4>
+      <p class="author-bio">
+        {{ include.bio | default: "Hey! I'm Melon, and I am the founder of Nectar Flow Finance. I'm passionate about living life outside of the grind. I'm always expanding my knowledge on a multitude of topics which include personal finance, side hustles, making extra money, and starting businesses. I am starting on this finance adventure and am eager for us to grow together." }}
+      </p>
+      {% if include.show_contact %}
+      <div class="author-contact">
+        <p><strong>Connect with me:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a> | <a href="https://bsky.app/profile/{{ site.bluesky_username }}" target="_blank">BlueSky</a></p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+.author-block {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #dee2e6;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.author-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.author-image {
+  flex-shrink: 0;
+}
+
+.author-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-name {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.author-bio {
+  margin: 0 0 12px 0;
+  color: #495057;
+  line-height: 1.6;
+  font-size: 0.95em;
+}
+
+.author-contact {
+  margin-top: 12px;
+}
+
+.author-contact p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+.author-contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.author-contact a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .author-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .author-image {
+    align-self: center;
+  }
+}
+</style> 

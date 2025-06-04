@@ -113,7 +113,7 @@ You can checkout my article on[ investing basics](https://nectarflowfinance.com/
 ### Step 3: Watch Out for Fees and Fluff
 
 - Sustainable funds can carry higher fees. Compare expense ratios.
-- Look into what “sustainable” means for each fund. Some are more bark than bite.
+- Look into what "sustainable" means for each fund. Some are more bark than bite.
 
 ### Step 4: Set It and Check It
 
@@ -134,12 +134,14 @@ You can checkout my article on[ investing basics](https://nectarflowfinance.com/
 
 ## Sustainable Investing That Reflects You
 
-If you’re queer, femme, disabled, or just deeply skeptical of systems that weren’t built with you in mind. Then traditional investing advice might feel alienating.
+If you're queer, femme, disabled, or just deeply skeptical of systems that weren't built with you in mind. Then traditional investing advice might feel alienating.
 
-But sustainable investing? It can be a reclamation. A way to participate in capitalism _on your own terms and nudge the system in a better direction as you go.
+But sustainable investing? It can be a reclamation. A way to participate in capitalism on your own terms and nudge the system in a better direction as you go.
 
-Is it perfect? No. But it’s a start. And it’s better than sitting on the sidelines while your savings lose value to inflation.
+Is it perfect? No. But it's a start. And it's better than sitting on the sidelines while your savings lose value to inflation.
 
 Start small. Start now. Let your money grow like a garden you actually want to live in.
+
+{% include affiliate-disclaimer.html %}
 
 ~Melon

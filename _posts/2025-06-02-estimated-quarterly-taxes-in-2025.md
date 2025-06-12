@@ -50,7 +50,7 @@ If you file your 2025 tax return and pay your entire balance by **January 31, 20
 
 ## Safe Harbor: The IRS's Version of "Close Enough"
 
-Here's the reality... the IRS doesn't expect you to be psychic. You don't have to estimate your taxes perfectly—as long as you follow one of their "safe harbor" rules, you're unlikely to get hit with penalties.
+Here's the reality... the IRS doesn't expect you to be psychic. You don't have to estimate your taxes perfectly. As long as you follow one of their "safe harbor" rules, you're unlikely to get hit with penalties.
 
 You're in the clear if you either:
 
@@ -64,7 +64,7 @@ Pick the easier one, and aim for that in your quarterly payments.
 
 ### 1. Married, Self-Employed, Filing Jointly – $120K Income
 
-**Meet Lucas and Adrian.** They're both freelancers—Lucas's a photographer, Adrian is a software consultant. They expect to earn $120,000 combined in 2025.
+**Meet Lucas and Adrian.** They're both freelancers. Lucas's a photographer, Adrian is a software consultant. They expect to earn $120,000 combined in 2025.
 
 - In 2024, they owed $14,000 in taxes.
 - To be safe, they want to hit that **100% safe harbor** mark.
@@ -94,7 +94,7 @@ They automate $3,500 payments from a joint business savings account (more on tha
 
 Geralt uses a simple rule: 25% of every client payment goes into a tax bucket. It's not perfect, but it means Geralt never ends up panicking at deadline time.
 
-**Pro tip:** I named my tax account 'IRS Troll Toll' so I feel less bitter when I move money into it.
+**Pro tip:** I named my tax account 'Daddy Governments Money', but you might pick something like 'IRS Troll Toll' so to feel less bitter when you move money into it.
 
 
 ## How to Actually Calculate It (Without Crying)
@@ -120,6 +120,8 @@ Yes, it's math. But it's survivable. You can also use [IRS Form 1040-ES](https:/
 
 Paying quarterly taxes isn't exactly thrilling, but it also doesn't have to be a source of dread. With a little planning and some steady systems, you can handle this without surprise penalties or late-night IRS research.
 
-Honestly? It's part of what makes you a business owner. You're doing the real work—not just the fun parts. And every time you make that estimated payment, you're one step closer to making tax season a footnote instead of a crisis.
+Honestly? It's part of what makes you a business owner. You're doing the real work not just the fun parts. And every time you make that estimated payment, you're one step closer to making tax season a footnote instead of a crisis.
+
+~ Melon
 
 _Note: This article is for informational purposes only and does not constitute tax advice. Please consult a tax professional for personalized guidance._

@@ -11,7 +11,6 @@ tags:
   - nectar
   - flow
   - finance
-featured_image: /assets/images/welcome-nectar-flow-finance.jpg
 seo_title: "Welcome to Nectar Flow Finance - Simple Personal Finance Blog"
 seo_description: Welcome to Nectar Flow Finance! Learn straightforward, practical financial advice for budgeting, investing, and wealth building without the jargon.
 ---

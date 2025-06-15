@@ -12,7 +12,7 @@ tags:
   - budgeting
   - financial
   - planning
-featured_image: /images/emergency-fund-guide.jpg
+featured_image: /assets/images/usd-money-tubes.jpg
 seo_title: "Emergency Fund Guide: How Much Money Should You Save in 2025"
 seo_description: Learn how to build the perfect emergency fund for your situation. Expert advice on saving 3-12 months of expenses for financial security and peace of mind.
 ---

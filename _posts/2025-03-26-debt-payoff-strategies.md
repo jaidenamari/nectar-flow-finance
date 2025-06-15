@@ -211,6 +211,4 @@ It's time to plant something better.
 
 ~Melon
 
-{% include affiliate-disclaimer.html %}
-
 The key is taking action—even imperfect action—rather than waiting for the perfect moment that never comes.

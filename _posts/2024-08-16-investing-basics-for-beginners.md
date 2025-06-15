@@ -11,11 +11,10 @@ tags:
   - getting
   - started
   - market
-featured_image: /images/investing-basics-beginners.jpg
+featured_image: /assets/images/investing-laptop-anntarazevich-14751274.jpg
 seo_title: "Investing Basics for Beginners: Where to Start in the Stock Market"
 seo_description: Learn investing basics for beginners. Discover how to start investing in the stock market with simple strategies, index funds, and step-by-step guidance.
 ---
-
 Investing can feel like learning a new language. The acronyms, the jargon, the risk it’s enough to make most of us put it off for “someday.” I get it. I didn’t start investing until my 30s. No one ever explained IRAs or compounding to me growing up, and I definitely didn’t have a mentor handing me a step-by-step playbook.
 
 Instead, I stumbled into investing after a casual chat with a friend who mentioned retirement accounts. That sent me down a rabbit hole of accounts, terms, and YouTube explainer videos. I got a little overzealous at first (okay, a lot), opening accounts at multiple institutions trying to find the *perfect* place to park my cash.

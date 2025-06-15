@@ -17,6 +17,7 @@ tags:
   - HYSA
   - 1040-ES
   - safe-harbor
+featured_image: /assets/images/counting-bills-karolina-grabowska-4386431.jpg
 seo_title: 2025 Self-Employed Quarterly Tax Guide
 seo_description: Learn how to calculate and manage estimated tax payments in 2025 if you're self-employed. Includes safe harbor rules, penalty avoidance, case studies, and practical strategies.
 ---

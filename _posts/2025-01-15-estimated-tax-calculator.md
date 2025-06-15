@@ -11,6 +11,7 @@ tags:
 - IRS
 - 1040-ES
 - tax planning
+featured_image: /assets/images/laptop-cottonbro-4065876.jpg
 seo_title: "2025 Estimated Tax Calculator - Free IRS Form 1040-ES Alternative"
 seo_description: Calculate your 2025 quarterly estimated tax payments with our free calculator. Based on IRS Form 1040-ES with simple questionnaire format.
 ---

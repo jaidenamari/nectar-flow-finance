@@ -3,6 +3,7 @@ layout: post
 title: "Stock Distribution Calculator: Balance Your Portfolio"
 date: 2025-05-19
 categories: [Tools, Investing]
+featured_image: /assets/images/stock-charts.jpg
 ---
 I created this calculator because I was often left scratching my head trying to figure out how much to allocate to each stock and maintain my meticulously balanced portfolio. Maybe It's a bit overboard to be so fractional about it, but when I have the option to invest by dollars rather than whole shares, I like to neatly organize my investments.
 

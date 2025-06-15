@@ -4,25 +4,25 @@ title: About
 permalink: /about/
 ---
 
-My name is Melon Garrett and I am the founder of Nectar Flow Finance. 
+My name is Melon Amari and I am the founder of Nectar Flow Finance. 
 
 <!-- Eventually put some credentials here, like places I'm featured and links to a press page -->
 
 I started this website in early 2025 to document my own journey towards financial freedom, as well as the trials and tribulations of learning Finance from the ground up. For example my experience trying to learn how to [pay off debt](https://nectarflowfinance.com/debt%20management/2025/03/26/debt-payoff-strategies.html). It seemed valuable to share my insights and tips on personal finance, budgeting, investing and making money. 
 
-I have a background in tech with a Bachelors of Science in Cybersecurity, and I work as a Security Engineer and Operations Architect at a small company in Seattle. I build the technical infrastructure for startups and small business and I'm passionate about helping founders launch their ideas, and make sustainable products.
+I have a background in tech with a Bachelors of Science in Cybersecurity, and I work as a Security Engineer and Operations Architect at a small company in Seattle. I build the technical infrastructure for startups and small business and I'm passionate about helping founders launch their ideas to make sustainable products.
 
-I went from living off grid with an income of about 9k per year to having a full time tech job after completing my degree. My low income made me a wizard and being frugal, and spending my income wisely. This shift immediately made me aware of how little I knew about finance. However, as a gardener I knew a thing or too about planning for the future, and putting back food for the winter. I may not have a finance background, but I am deeply rooted in the natural world, while also being very proficient in the digital world. 
+I went from living off grid with an income of about 9k per year to having a full time tech job after completing my degree. My low income made me a wizard and being frugal. This shift immediately made me aware of how little I knew about finance. However, as a gardener I knew a thing or too about planning for the future putting food back for Winter. I may not have a finance background, but I am deeply rooted in the natural world, while also being very proficient in the digital world. 
 
-Blending my knowledge of the natural world and my newly found career path, and income I decided to start this blog.
+Blending my nature smarts and my newly found career path -- I decided to start this blog.
 
 ## In the Beginning
 
 I accumulated a lot of student loan debt during my first attempt at University. I spent years with that looming with hardly enough resources to make a dent and keep up with the interest payments. I started thinking of ways to make extra money. I tried starting my own businesses, various side hustles. Always dreaming and scheming ways to clean up my wayward past. 
 
-I am a lover of life, and believe that money and capitalism shouldn't necessarily be the driver of fulfillment. The reality is that unless you have a large amount of discipline and are extremely stubborn to live outside of the modern world, it takes a lot to be comfortable, and build community, while also not depending on financial systems. 
+I am a lover of life, and believe that money and capitalism shouldn't be the driver of fulfillment. The reality is that unless you have a large amount of discipline and are extremely stubborn, living outside of the modern world. It takes a lot of effort to be comfortable and build community, while also not depending on financial systems. 
 
-As I've grown on my journey I have made progress on paying back my student debt, and investing, and having a stable income. 
+As I've grown on my journey I have made progress on paying back my student debt, and investing, and having a stable income. Chronicaling this adventure with the hopes to inspire others who are not finance gurus. 
 
 ## Making your own nectar flow
 
@@ -43,7 +43,7 @@ Whether that means growing a traditional career path, starting a lucrative side 
 
 Thank you for joining me on this journey
 
--- Melon
+~ Melon
 
 ## Join the Hive
 

@@ -23,7 +23,7 @@ tags:
   - relocation
   - chosen
   - family
-featured_image: /images/financial-planning-lgbtq.jpg
+featured_image: /assets/images/planning-session-karolina-grabowska-8092507.jpg
 seo_title: Best Financial Planning Tips for the LGBTQ+ Community in 2025
 seo_description: "A grounded guide to building economic resilience in 2025 for queer individuals and families: covering emergency funds, legal planning, ethical spending, and navigating uncertain times."
 ---

@@ -14,7 +14,7 @@ tags:
   - accounts
   - tax-loss
   - harvesting
-featured_image: /images/tax-optimization-strategies.jpg
+featured_image: /assets/images/budgeting-karolina-grabowska-4475523.jpg
 seo_title: "Tax Optimization Strategies: Legally Minimize Your Tax Burden in 2025"
 seo_description: Discover legal tax optimization strategies to reduce your tax liability. Learn about tax-advantaged accounts, deductions, credits, and planning techniques for 2025.
 ---

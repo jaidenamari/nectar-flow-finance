@@ -38,12 +38,13 @@ layout: default
       <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title | escape }}" />
     </div>
     {% endif %}
-    {% include affiliate-disclaimer.html %}
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  {% include disclaimer.html %}
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}

@@ -3,7 +3,9 @@
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    {%- assign title_words = site.title | split: " " -%}
+    {%- capture title_lead -%}{%- for w in title_words -%}{%- unless forloop.last -%}{{ w | escape }} {% endunless -%}{%- endfor -%}{%- endcapture -%}
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ title_lead }}<span class="brand-accent">{{ title_words.last | escape }}</span></a>
 
     {%- if page_paths -%}
       <nav class="site-nav">

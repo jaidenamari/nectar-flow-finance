@@ -10,5 +10,12 @@ vendor
 _posts/Planning
 _posts/Branding
 _posts/Affiliate
+_posts/Research
+_posts/temp
+_posts/Pasted image *.png
 .claude
 .example
+
+# OS / IDE noise
+.DS_Store
+.idea/

@@ -1,0 +1,89 @@
+.stage {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.stage .bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 45% at 82% 12%, color-mix(in oklch, var(--bloom-300) 32%, transparent) 0%, transparent 60%),
+    radial-gradient(70% 55% at 8% 78%, color-mix(in oklch, var(--forest-300) 28%, transparent) 0%, transparent 60%),
+    radial-gradient(45% 40% at 50% 100%, color-mix(in oklch, var(--bloom-200) 20%, transparent) 0%, transparent 70%),
+    linear-gradient(170deg,
+      var(--bone-50) 0%,
+      color-mix(in oklch, var(--bone-50) 82%, var(--bloom-100)) 50%,
+      color-mix(in oklch, var(--bone-50) 68%, var(--forest-200)) 100%
+    );
+}
+
+.stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: url('/assets/images/apple-tree-blossom.jpg');
+  background-size: cover;
+  background-position: 50% 18%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  z-index: 1;
+  pointer-events: none;
+}
+.orb-1 {
+  width: 560px;
+  height: 560px;
+  right: -160px;
+  top: 6%;
+  background: radial-gradient(circle, color-mix(in oklch, var(--bloom-400) 50%, transparent), transparent 70%);
+}
+.orb-2 {
+  width: 720px;
+  height: 720px;
+  left: -220px;
+  bottom: -260px;
+  background: radial-gradient(circle, color-mix(in oklch, var(--forest-400) 55%, transparent), transparent 70%);
+}
+.orb-3 {
+  width: 380px;
+  height: 380px;
+  right: 8%;
+  bottom: 18%;
+  background: radial-gradient(circle, color-mix(in oklch, var(--bloom-300) 40%, transparent), transparent 70%);
+  filter: blur(80px);
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.doc {
+  position: relative;
+  z-index: 3;
+}
+
+/* iOS Safari and most touch devices ignore background-attachment: fixed
+   and may render it as scroll (or worse, glitch). Pin it to scroll on
+   touch devices so the layering stays coherent. */
+@media (hover: none) and (pointer: coarse) {
+  .stage::before { background-attachment: scroll; }
+}

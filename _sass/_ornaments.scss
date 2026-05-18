@@ -1,0 +1,74 @@
+/* Round bullet in bloom — restrained replacement for the hedera ornament. */
+.post-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+.post-content ul > li {
+  position: relative;
+  padding-left: 22px;
+  margin: 6px 0;
+  line-height: 1.7;
+}
+.post-content ul > li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  color: var(--bloom-500);
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+/* Nested ul gets a smaller muted bullet for hierarchy. */
+.post-content ul ul > li::before {
+  font-size: 18px;
+  color: color-mix(in oklch, var(--bloom-500) 70%, transparent);
+}
+
+/* Reusable centered ornament divider — for use in markdown via raw HTML
+   or via a future {% include ornament-divider.html %} shortcode (Phase 4). */
+.ornament-divider {
+  text-align: center;
+  margin: 36px 0;
+  color: var(--bloom-500);
+  letter-spacing: 0.4em;
+  font-size: 18px;
+}
+
+/* GFM task-list checkboxes (- [ ] / - [x] in markdown). Custom appearance
+   matching the example's checklist treatment: forest-bordered, soft white fill. */
+.post-content li input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--forest-600);
+  border-radius: 3px;
+  background: color-mix(in oklch, white 70%, transparent);
+  margin-right: 10px;
+  vertical-align: -2px;
+  cursor: default;
+}
+.post-content li input[type="checkbox"]:checked {
+  background: var(--forest-600);
+  position: relative;
+}
+.post-content li input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  left: 1px;
+  top: -3px;
+  color: var(--bone-50);
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* When a li has a task-list checkbox, suppress our ❧ bullet so we don't
+   render both. The GFM-rendered HTML adds the checkbox as the first child
+   of the li, so we use :has() to detect. */
+.post-content ul > li:has(> input[type="checkbox"]) {
+  padding-left: 0;
+}
+.post-content ul > li:has(> input[type="checkbox"])::before {
+  content: none;
+}

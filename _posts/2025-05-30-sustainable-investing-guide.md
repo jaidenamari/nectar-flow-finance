@@ -143,8 +143,6 @@ Is it perfect? No. But it's a start. And it's better than sitting on the sidelin
 
 Start small. Start now. Let your money grow like a garden you actually want to live in.
 
-{% include affiliate-disclaimer.html %}
-
 ~Melon
 
 

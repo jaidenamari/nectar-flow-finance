@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-My name is Melon Amari and I am the founder of Nectar Flow Finance. 
+My name is Melon and I am the founder of Nectar Flow Finance. 
 
 <!-- Eventually put some credentials here, like places I'm featured and links to a press page -->
 

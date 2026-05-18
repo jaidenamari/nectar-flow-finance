@@ -1,0 +1,255 @@
+// ============================================================
+// Components — reusable blocks
+// ============================================================
+
+// Disclaimer — verbatim from example lines 369–407, variables already match
+.disclaimer {
+  margin-top: 64px;
+  padding: 36px 8% 8px;
+  text-align: center;
+}
+
+.disclaimer .ornament {
+  font-size: 24px;
+  color: var(--bloom-500);
+  margin-bottom: 20px;
+}
+
+.disclaimer .label {
+  font-family: "Helvetica Neue", "Inter", system-ui, sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--forest-700);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.disclaimer p {
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0 auto 14px;
+  max-width: 58ch;
+  color: var(--muted);
+}
+
+.disclaimer .brand-sig {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 22px;
+  color: var(--forest-700);
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+// Author block
+.author-block {
+  background: color-mix(in oklch, var(--bone-100) 70%, transparent);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 4px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.author-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.author-image {
+  flex-shrink: 0;
+
+  img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--bone-50);
+    box-shadow: 0 2px 8px color-mix(in oklch, var(--forest-700) 18%, transparent);
+  }
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-name {
+  margin: 0 0 8px 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--forest-800);
+}
+
+.author-bio {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.author-contact {
+  margin-top: 12px;
+
+  .label {
+    display: block;
+    color: var(--bloom-700);
+    margin-bottom: 4px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: var(--bloom-700);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklch, var(--bloom-700) 40%, transparent);
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: var(--bloom-700);
+      text-decoration-color: var(--bloom-700);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .author-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .author-image {
+    align-self: center;
+  }
+}
+
+// ============================================================
+// Post-content table — auto-snapshot treatment
+// ============================================================
+
+.post-content table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-family: "Helvetica Neue", "Inter", system-ui, sans-serif;
+  font-size: 15px;
+  background: var(--bone-50);
+  border: 1px solid var(--forest-200);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.post-content thead th {
+  background: var(--forest-700);
+  color: var(--bone-50);
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  padding: 10px 12px;
+}
+
+.post-content tbody td {
+  padding: 8px 12px;
+  border-top: 1px solid var(--bone-100);
+  vertical-align: top;
+  color: var(--ink);
+  word-wrap: break-word;
+}
+
+.post-content tbody tr:nth-child(even) td {
+  background: var(--bone-100);
+}
+
+.post-content tbody tr td:first-child {
+  color: var(--forest-900);
+  font-weight: 700;
+}
+
+.post-content tbody tr td:nth-child(2):last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-content tbody tr.total td {
+  background: var(--forest-100);
+  font-weight: 700;
+  color: var(--forest-900);
+}
+
+// ============================================================
+// Note callout — verbatim from example lines 246–265
+// ============================================================
+
+.note {
+  margin: 22px 0 8px;
+  padding: 14px 0 14px 20px;
+  border-left: 3px solid var(--amber-500);
+  font-style: italic;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 60ch;
+
+  .label {
+    font-style: normal;
+    font-family: "Helvetica Neue", "Inter", system-ui, sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber-600);
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}
+
+// ============================================================
+// Reflection callout — verbatim from example lines 268–306
+// ============================================================
+
+.reflection {
+  margin: 20px 0 6px;
+  padding: 24px 28px;
+  border-left: 4px solid var(--bloom-500);
+  border-top: 1px solid color-mix(in oklch, var(--bloom-300) 70%, transparent);
+  border-bottom: 1px solid color-mix(in oklch, var(--bloom-300) 70%, transparent);
+  border-right: 1px solid color-mix(in oklch, var(--bloom-300) 70%, transparent);
+  background: color-mix(in oklch, var(--bloom-50) 75%, transparent);
+  border-radius: 2px;
+  max-width: 60ch;
+  backdrop-filter: blur(1px);
+
+  .label {
+    font-family: "Helvetica Neue", "Inter", system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--bloom-700);
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  p {
+    font-style: italic;
+    font-size: 16.5px;
+    line-height: 1.6;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 24px;
+
+    &::before {
+      content: "❧";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--bloom-500);
+      font-style: normal;
+      font-size: 18px;
+    }
+  }
+}

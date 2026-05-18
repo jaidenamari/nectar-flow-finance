@@ -1,0 +1,49 @@
+// ============================================================
+// Design tokens — botanical editorial palette
+// Source of truth: .example/WillowGraceInk-Session-01-Homework.html
+// ============================================================
+
+:root {
+  // Forest (primary, green) — 10 steps
+  --forest-900: #1f3520;
+  --forest-800: #2d4a2c;
+  --forest-700: #3a5a39;
+  --forest-600: #4a7148;
+  --forest-500: #5b8a5a;
+  --forest-400: #728f63;
+  --forest-300: #97b288;
+  --forest-200: #bdcfb0;
+  --forest-100: #dde7d4;
+  --forest-50:  #f1f5ee;
+
+  // Bloom (secondary, dusty rose) — 7 steps
+  --bloom-700: #88505d;
+  --bloom-500: #d99cac;
+  --bloom-400: #e0a3af;
+  --bloom-300: #ecc1c9;
+  --bloom-200: #f3d6dd;
+  --bloom-100: #f9e7ec;
+  --bloom-50:  #fbf3f5;
+
+  // Amber (accent)
+  --amber-500: #e3b66a;
+  --amber-600: #bf9148;
+
+  // Bone (neutral)
+  --bone-50:   #fafaf7;
+  --bone-100:  #efeeea;
+  --bone-200:  #dcdad2;
+
+  // Text
+  --ink:   #252422;
+  --muted: #6b6863;
+
+  // Semantic aliases
+  --color-background: var(--bone-50);
+  --color-text: var(--ink);
+  --color-heading: var(--forest-800);
+  --color-link: var(--forest-700);
+  --color-link-hover: var(--bloom-700);
+  --color-border-soft: color-mix(in oklch, var(--forest-300) 40%, transparent);
+  --color-border-strong: color-mix(in oklch, var(--forest-300) 75%, transparent);
+}

@@ -9,6 +9,7 @@ baseurl: ""
 url: "https://nectarflowfinance.com"
 bluesky_username: nectarflow.bsky.social
 github_username: jaidenamari
+google_analytics: G-JFYDFCDB7R
 
 # Build settings
 theme: minima

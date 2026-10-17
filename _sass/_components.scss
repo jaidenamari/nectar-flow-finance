@@ -253,3 +253,16 @@
     }
   }
 }
+
+// 404 page
+.not-found {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+
+  h1 {
+    margin: 0 0 16px;
+    font-size: 3em;
+    color: var(--forest-800);
+  }
+}

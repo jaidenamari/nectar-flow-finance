@@ -1,20 +1,18 @@
+# Jekyll build output
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Local-only notes, research and design references (never published)
+_notes
 .docs
-.obsidian
-.temp
-.cursor/rules
-_posts/Planning
-_posts/Branding
-_posts/Affiliate
-_posts/Research
-_posts/temp
-_posts/Pasted image *.png
+
+# Tool config
 .claude
-.example
+.cursor/rules
+.obsidian
 
 # OS / IDE noise
 .DS_Store

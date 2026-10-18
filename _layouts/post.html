@@ -28,7 +28,7 @@ layout: default
       {%- endif -%}
       {%- if page.category -%}
         • <span class="post-category">
-          <a href="/category/{{ page.category | slugify }}/">{{ page.category }}</a>
+          {% include category-link.html name=page.category %}
         </span>
       {%- endif -%}
     </p>

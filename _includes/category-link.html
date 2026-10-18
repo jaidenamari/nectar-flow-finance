@@ -1,0 +1,4 @@
+{%- comment -%}Links a category name to its page in _categories, or renders plain text when it has no page.{%- endcomment -%}
+{%- assign cat_url = include.name | slugify | prepend: "/category/" | append: "/" -%}
+{%- assign cat_page = site.categories | where: "url", cat_url | first -%}
+{%- if cat_page -%}<a href="{{ cat_url | relative_url }}">{{ include.name }}</a>{%- else -%}{{ include.name }}{%- endif -%}

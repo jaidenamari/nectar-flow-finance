@@ -15,6 +15,7 @@ google_analytics: G-JFYDFCDB7R
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - github-pages
 
 # Collections
@@ -25,3 +26,18 @@ collections:
 
 # Custom settings
 show_excerpts: true
+
+# Pages linked in the header after Articles and Tools. Pages not listed here stay out of the nav.
+header_pages:
+  - about.md
+
+# Repository files that are not site content. Setting this replaces Jekyll's defaults,
+# so they are listed here too.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
+  - .sass-cache
+  - .jekyll-cache

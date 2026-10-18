@@ -5,15 +5,6 @@ _site
 .jekyll-metadata
 vendor
 
-# Local-only notes, research and design references (never published)
-_notes
-.docs
-
-# Tool config
-.claude
-.cursor/rules
-.obsidian
-
 # OS / IDE noise
 .DS_Store
 .idea/

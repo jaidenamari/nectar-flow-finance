@@ -10,13 +10,15 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
-import { basename, dirname, join, relative } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { basename, join, relative } from 'node:path';
+import { builtSite, root } from './built-site.mjs';
 
-const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const site = join(root, '_site');
+const site = builtSite();
 // Source folders whose pages may set seo_*; root-level pages are read too.
 const SOURCE_DIRS = ['_posts', '_categories'];
+// A post is a dated file anywhere under _posts/: Jekyll builds posts from its
+// subfolders too, and _posts is an Obsidian vault, so posts may be filed there.
+const POST = /^\d{4}-\d{2}-\d{2}-/;
 
 const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" };
 const decode = (s) =>
@@ -91,30 +93,41 @@ function builtPath(dir, file, fm) {
   if (permalink) return (permalink.endsWith('/') ? `${permalink}index.html` : permalink).replace(/^\//, '');
   const name = file.replace(/\.[^.]+$/, '');
   if (dir === '_posts') {
-    const slug = `${name.replace(/^\d{4}-\d{2}-\d{2}-/, '')}.html`;
+    const slug = `${name.replace(POST, '')}.html`;
     const hits = [...heads.keys()].filter((rel) => basename(rel) === slug);
     return hits.length === 1 ? hits[0] : null;
   }
   return dir === '' ? `${name}.html` : null;
 }
 
+// Page sources in dir, as paths relative to it; under _posts, also those in
+// subfolders. Dot folders (.obsidian, .trash) are not content.
+function sourceFiles(dir, sub = '') {
+  const abs = join(root, dir, sub);
+  if (!existsSync(abs)) return [];
+  return readdirSync(abs, { withFileTypes: true }).flatMap((e) => {
+    if (e.name.startsWith('.')) return [];
+    const rel = join(sub, e.name);
+    if (e.isDirectory()) return dir === '_posts' ? sourceFiles(dir, rel) : [];
+    if (!/\.(md|markdown|html)$/.test(e.name)) return [];
+    return dir !== '_posts' || POST.test(e.name) ? [rel] : [];
+  });
+}
+
 const sources = [];
 for (const dir of ['', ...SOURCE_DIRS]) {
-  const abs = join(root, dir);
-  if (!existsSync(abs)) continue;
-  for (const file of readdirSync(abs).filter((f) => /\.(md|markdown|html)$/.test(f))) {
-    const fm = readFileSync(join(abs, file), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  for (const rel of sourceFiles(dir)) {
+    const fm = readFileSync(join(root, dir, rel), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
     if (!fm) continue;
     const seoTitle = frontMatterValue(fm[1], 'seo_title');
     const seoDescription = frontMatterValue(fm[1], 'seo_description');
     if (seoTitle || seoDescription) {
-      sources.push({ source: join(dir, file), built: builtPath(dir, file, fm[1]), seoTitle, seoDescription });
+      sources.push({ source: join(dir, rel), built: builtPath(dir, basename(rel), fm[1]), seoTitle, seoDescription });
     }
   }
 }
 
-test('the site is built and has pages and seo_* sources', () => {
-  assert.ok(existsSync(site), `${site} not found; run bundle exec jekyll build first`);
+test('the site has pages and seo_* sources', () => {
   assert.ok(heads.size > 0, 'no built pages found; the test would pass vacuously');
   assert.ok(sources.length > 0, 'no source sets seo_title or seo_description; the test would pass vacuously');
 });

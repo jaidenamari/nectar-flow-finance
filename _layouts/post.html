@@ -35,17 +35,44 @@ layout: default
 
     {% if page.featured_image %}
     {%- comment -%}
-      Sizes and WebP files come from _scripts/images (_data/images.yml).
+      Sizes and WebP files come from _scripts/images (_data/images.yml),
+      keyed by path with a leading slash; front matter may omit the slash.
+      The script writes the WebP widths below that the source reaches without
+      upscaling, plus one at the source's own width when that is below the
+      largest, and records the fallback's real width; srcset lists the same
+      files.
       An image it hasn't processed yet gets a plain <img>.
       This image is the LCP element: load it eagerly, never lazily.
     {%- endcomment -%}
-    {%- assign featured = site.data.images[page.featured_image] %}
+    {%- assign featured_widths = "740,1480" | split: "," -%}
+    {%- assign featured_max = featured_widths | last | plus: 0 -%}
+    {%- assign featured_path = page.featured_image -%}
+    {%- assign featured_first = featured_path | slice: 0 -%}
+    {%- if featured_first != "/" -%}
+      {%- assign featured_path = featured_path | prepend: "/" -%}
+    {%- endif -%}
+    {%- assign featured = site.data.images[featured_path] %}
     <div class="post-featured-image">
       {%- if featured %}
-      {%- assign featured_base = page.featured_image | split: "." | pop | join: "." %}
+      {%- assign featured_base = featured_path | split: "." | pop | join: "." -%}
+      {%- assign featured_srcset = "" | split: "" -%}
+      {%- assign featured_own = false -%}
+      {%- if featured.width < featured_max -%}{%- assign featured_own = true -%}{%- endif -%}
+      {%- for size in featured_widths -%}
+        {%- assign featured_w = size | plus: 0 -%}
+        {%- if featured_w == featured.width -%}{%- assign featured_own = false -%}{%- endif -%}
+        {%- if featured_w <= featured.width -%}
+          {%- capture featured_src %}{{ featured_base | append: "-" | append: featured_w | append: ".webp" | relative_url }} {{ featured_w }}w{% endcapture -%}
+          {%- assign featured_srcset = featured_srcset | push: featured_src -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if featured_own -%}
+        {%- capture featured_src %}{{ featured_base | append: "-" | append: featured.width | append: ".webp" | relative_url }} {{ featured.width }}w{% endcapture -%}
+        {%- assign featured_srcset = featured_srcset | push: featured_src -%}
+      {%- endif %}
       <picture>
         <source type="image/webp"
-          srcset="{{ featured_base | append: '-740.webp' | relative_url }} 740w, {{ featured_base | append: '-1480.webp' | relative_url }} 1480w"
+          srcset="{{ featured_srcset | join: ', ' }}"
           sizes="(max-width: 800px) calc(100vw - 30px), 740px" />
         <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title | escape }}" width="{{ featured.width }}" height="{{ featured.height }}" fetchpriority="high" decoding="async" />
       </picture>

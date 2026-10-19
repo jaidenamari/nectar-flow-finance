@@ -27,6 +27,7 @@
   inset: 0;
   z-index: 1;
   background-image: url('/assets/images/apple-tree-blossom.jpg');
+  background-image: image-set(url('/assets/images/apple-tree-blossom.webp') type('image/webp'), url('/assets/images/apple-tree-blossom.jpg') type('image/jpeg'));
   background-size: cover;
   background-position: 50% 18%;
   background-repeat: no-repeat;

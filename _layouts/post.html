@@ -34,8 +34,24 @@ layout: default
     </p>
 
     {% if page.featured_image %}
+    {%- comment -%}
+      Sizes and WebP files come from _scripts/images (_data/images.yml).
+      An image it hasn't processed yet gets a plain <img>.
+      This image is the LCP element: load it eagerly, never lazily.
+    {%- endcomment -%}
+    {%- assign featured = site.data.images[page.featured_image] %}
     <div class="post-featured-image">
+      {%- if featured %}
+      {%- assign featured_base = page.featured_image | split: "." | pop | join: "." %}
+      <picture>
+        <source type="image/webp"
+          srcset="{{ featured_base | append: '-740.webp' | relative_url }} 740w, {{ featured_base | append: '-1480.webp' | relative_url }} 1480w"
+          sizes="(max-width: 800px) calc(100vw - 30px), 740px" />
+        <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title | escape }}" width="{{ featured.width }}" height="{{ featured.height }}" fetchpriority="high" decoding="async" />
+      </picture>
+      {%- else %}
       <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title | escape }}" />
+      {%- endif %}
     </div>
     {% endif %}
   </header>

@@ -1,0 +1,14 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="wrapper">
+    <nav class="footer-nav" aria-label="Footer">
+      {%- assign footer_categories = site.categories | sort: "title" %}
+      {%- for cat in footer_categories %}
+      <a class="footer-link" href="{{ cat.url | relative_url }}">{{ cat.title | escape }}</a>
+      {%- endfor %}
+      <a class="footer-link" href="{{ "/about/" | relative_url }}">About</a>
+      <a class="footer-link" href="{{ "/disclaimer/" | relative_url }}">Disclaimer</a>
+      <a class="footer-link" href="{{ "/sitemap.xml" | relative_url }}">Sitemap</a>
+    </nav>
+    <p class="footer-copy">&copy; {{ site.time | date: "%Y" }} {{ site.title | escape }}</p>
+  </div>
+</footer>

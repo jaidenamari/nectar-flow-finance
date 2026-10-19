@@ -1,21 +1,6 @@
 ---
-# Only the main css file needs front matter (this is the main SCSS entry point).
+# Front matter makes Jekyll compile this file. The Sass is in _includes/site.scss,
+# which _includes/head.html also inlines into every page.
 ---
 
-// Minima SCSS variable overrides — must come BEFORE @import "minima"
-$base-font-family: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-$base-font-size:   18px;
-$base-line-height: 1.6;
-$text-color:       #252422;
-$background-color: #fafaf7;
-$brand-color:      #3a5a39;
-$grey-color:       #6b6863;
-
-@import "fonts";
-@import "minima";
-@import "variables";
-@import "typography";
-@import "layout";
-@import "components";
-@import "atmosphere";
-@import "ornaments";
+{% include site.scss %}

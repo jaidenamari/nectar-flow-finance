@@ -3,12 +3,15 @@
 // _layouts/post.html falls back to a plain <img> otherwise, which loses the
 // WebP, the dimensions and the fetch priority on the page's LCP image.
 // The data is keyed by path with a leading slash; front matter may omit it.
+// The site background is checked too: the built CSS keeps the plain JPG
+// line and follows it with an image-set that offers the WebP.
 // Run: node --test '_tests/**/*.test.mjs'
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { builtSite } from './built-site.mjs';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 // WebP widths, as in _scripts/images and _layouts/post.html.
@@ -84,3 +87,20 @@ for (const { post, image } of images) {
     }
   });
 }
+
+const site = builtSite();
+
+test('the site background is served as WebP with the JPG fallback', () => {
+  const css = join(site, 'assets/css/main.css');
+  assert.ok(existsSync(css), '_site/assets/css/main.css not found; run bundle exec jekyll build');
+  const jpg = 'url\\(["\']?/assets/images/apple-tree-blossom\\.jpg["\']?\\)';
+  const webp = 'url\\(["\']?/assets/images/apple-tree-blossom\\.webp["\']?\\)\\s*type\\(["\']image/webp["\']\\)';
+  const rule = new RegExp(`background-image:\\s*${jpg};\\s*background-image:\\s*image-set\\([^;]*${webp}[^;]*${jpg}[^;]*\\)`);
+  assert.match(
+    readFileSync(css, 'utf8'),
+    rule,
+    'main.css lacks the plain background JPG line followed by an image-set with the WebP; see _sass/_atmosphere.scss',
+  );
+  const file = join(site, 'assets/images/apple-tree-blossom.webp');
+  assert.ok(existsSync(file), `${relative(root, file)} not found; ${FIX}, then build`);
+});

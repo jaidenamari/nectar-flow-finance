@@ -1,0 +1,34 @@
+# Repository labels. Applied with `gh label create <name> --color <color> --description <description> --force`.
+# Labels show the state of the site check; they do not enforce anything on their own.
+
+labels:
+  - name: needs-triage
+    color: FFF5B1
+    description: New and not yet prioritized
+  - name: needs-review
+    color: FBCA04
+    description: Waiting for the owner's review before merge
+  - name: changes-requested
+    color: D93F0B
+    description: The owner asked for changes
+  - name: do-not-merge
+    color: B60205
+    description: Hard stop, do not merge
+  - name: blocked
+    color: B60205
+    description: Cannot move forward
+  - name: regression
+    color: F9D0C4
+    description: Something that worked is broken
+  - name: post-mortem
+    color: D4C5F9
+    description: Incident review or follow-up
+  - name: data-change
+    color: FAD8C7
+    description: Changes published figures or calculator math
+  - name: security-review
+    color: BFDADC
+    description: Adds or changes third-party code, forms or tracking
+  - name: bug
+    color: D73A4A
+    description: Something isn't working

@@ -1,0 +1,93 @@
+name: Post-mortem
+description: Record a production incident and what prevents it recurring
+labels: ["post-mortem"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - "High: wrong figures or lost pages were live, or the site was down"
+        - "Medium: a visible regression readers could hit"
+        - "Low: caught and reverted with no reader-facing impact"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: "2-3 sentences: what broke, who was affected, how it was resolved"
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Pages and URLs affected, readers affected if known, and for how long
+    validations:
+      required: true
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: Actual dates and times, one event per line
+      value: |
+        - **YYYY-MM-DD HH:MM UTC**: event
+    validations:
+      required: true
+
+  - type: textarea
+    id: root-cause
+    attributes:
+      label: Root cause
+      description: What was wrong and why
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: Related issues
+      value: |
+        1. Main issue: #
+        2. Follow-up issues: #
+    validations:
+      required: true
+
+  - type: textarea
+    id: resolution
+    attributes:
+      label: Resolution
+      description: What fixed it now, and what prevents it recurring
+    validations:
+      required: true
+
+  - type: textarea
+    id: went-well
+    attributes:
+      label: What went well
+      value: "- "
+
+  - type: textarea
+    id: went-poorly
+    attributes:
+      label: What didn't go well
+      value: "- "
+
+  - type: textarea
+    id: action-items
+    attributes:
+      label: Action items
+      description: Prefer a check over a rule. Link each item to an issue or PR
+      value: "- [ ] "
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      value: |
+        - **PRs:**
+        - **Commits:**

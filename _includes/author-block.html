@@ -2,7 +2,7 @@
   <div class="author-content">
     {% if include.image %}
       <div class="author-image">
-        <img src="{{ include.image }}" alt="{{ include.name | default: 'Melon' }}" />
+        <img src="{{ include.image }}" alt="{{ include.name | default: 'Melon' }}" loading="lazy" decoding="async" />
       </div>
     {% endif %}
     <div class="author-info">

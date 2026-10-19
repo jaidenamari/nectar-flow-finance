@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+seo_description: "I'm Melon. I went from living off grid on about $9k a year to a Seattle tech job, and I write about learning finance from the ground up, student loans and all."
 ---
 
 My name is Melon and I am the founder of Nectar Flow Finance. 

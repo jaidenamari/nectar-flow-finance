@@ -144,7 +144,7 @@ I really want to help you take the guess work out of Estimated Quarterly Tax Pay
       <div class="input-group">
         <label for="priorYearTax">Your total tax from 2024 (line 24 of Form 1040)</label>
         <input type="number" id="priorYearTax" min="0" step="0.01" placeholder="0.00">
-        <small>This helps determine your safe harbor amount</small>
+        <small>This helps determine your safe harbor amount. If you leave it blank, we use 90% of your 2025 tax.</small>
       </div>
 
       <div class="input-group">
@@ -390,7 +390,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const childTaxCredit = parseFloat(document.getElementById('childTaxCredit').value) || 0;
     const otherCredits = parseFloat(document.getElementById('otherCredits').value) || 0;
     const withheld = parseFloat(document.getElementById('withheld').value) || 0;
-    const priorYearTax = parseFloat(document.getElementById('priorYearTax').value) || 0;
+    // Blank 2024 tax means unknown; an explicit 0 means no 2024 tax liability
+    const priorYearTaxInput = document.getElementById('priorYearTax').value;
+    const priorYearTaxUnknown = priorYearTaxInput.trim() === '';
+    const priorYearTax = parseFloat(priorYearTaxInput) || 0;
     const priorYearAGI = parseFloat(document.getElementById('priorYearAGI').value) || 0;
 
     // Calculate net self-employment income
@@ -425,7 +428,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const safeHarborMultiplier = isHighIncome ? 1.10 : 1.00;
     const safeHarborFromPriorYear = priorYearTax * safeHarborMultiplier;
     const safeHarborFromCurrentYear = taxAfterCredits * 0.90;
-    const requiredAnnual = Math.min(safeHarborFromPriorYear, safeHarborFromCurrentYear);
+    const requiredAnnual = priorYearTaxUnknown ?
+      safeHarborFromCurrentYear : Math.min(safeHarborFromPriorYear, safeHarborFromCurrentYear);
 
     // Calculate estimated payments needed
     const taxOwed = Math.max(0, taxAfterCredits - withheld);
@@ -442,6 +446,7 @@ document.addEventListener('DOMContentLoaded', function() {
       requiredAnnual,
       safeHarborFromPriorYear,
       safeHarborFromCurrentYear,
+      priorYearTaxUnknown,
       mustPayEstimated,
       taxOwed,
       incomeTax,
@@ -477,8 +482,11 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('quarterlyNote').textContent = "No estimated payments required!";
     }
 
-    const safeHarborNote = calc.safeHarborFromPriorYear < calc.safeHarborFromCurrentYear ? 
+    let safeHarborNote = calc.safeHarborFromPriorYear < calc.safeHarborFromCurrentYear ? 
       "Based on 2024 tax (safe harbor)" : "Based on 90% of 2025 tax";
+    if (calc.priorYearTaxUnknown) {
+      safeHarborNote = "Based on 90% of 2025 tax (2024 tax not entered)";
+    }
     document.getElementById('safeHarborNote').textContent = safeHarborNote;
 
     // Tax breakdown
@@ -527,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       recText = `<p>Based on your income and withholding, you should make quarterly estimated tax payments to avoid penalties.</p>`;
       
-      if (calc.isHighIncome) {
+      if (calc.isHighIncome && !calc.priorYearTaxUnknown) {
         recText += `<p class="warning">⚠️ <strong>High Income Alert:</strong> Since your 2024 AGI exceeded $150,000, you need to pay 110% of last year's tax to use the safe harbor rule.</p>`;
       }
 

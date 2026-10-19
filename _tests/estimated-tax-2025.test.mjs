@@ -107,6 +107,7 @@ function runCalculator(inputs) {
     quarterly: dollars('quarterlyAmount'),
     quarterlyNote: text('quarterlyNote'),
     safeHarborNote: text('safeHarborNote'),
+    recommendations: document.getElementById('recommendationsText').innerHTML,
   };
 }
 
@@ -169,6 +170,14 @@ test('prior-year tax lower than 90% of current uses 110% when 2024 AGI > 150,000
   assert.ok(prior * 1.1 < 0.9 * r.annualTax);
   assertNear(r.safeHarbor, prior * 1.1, 'safe harbor');
   assert.equal(r.safeHarborNote, 'Based on 2024 tax (safe harbor)');
+  assert.match(r.recommendations, /110%/);
+});
+
+test('blank prior-year tax with 2024 AGI over 150,000 shows no 110% alert', () => {
+  const r = runCalculator({ ...BASE, priorYearTax: '', priorYearAGI: '200000' });
+  assert.notEqual(r.quarterlyNote, NO_PAYMENTS, 'fixture should reach the recommendations branch');
+  assertNear(r.safeHarbor, 0.9 * r.annualTax, 'safe harbor');
+  assert.doesNotMatch(r.recommendations, /110%/);
 });
 
 test('prior-year tax higher than 90% of current uses 90% of current', () => {

@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       recText = `<p>Based on your income and withholding, you should make quarterly estimated tax payments to avoid penalties.</p>`;
       
-      if (calc.isHighIncome) {
+      if (calc.isHighIncome && !calc.priorYearTaxUnknown) {
         recText += `<p class="warning">⚠️ <strong>High Income Alert:</strong> Since your 2024 AGI exceeded $150,000, you need to pay 110% of last year's tax to use the safe harbor rule.</p>`;
       }
 

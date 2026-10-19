@@ -1,0 +1,60 @@
+{%- comment -%}
+  jekyll-seo-tag (2.8.0, pinned by github-pages) reads only title, description
+  and excerpt, so the seo_title / seo_description fields from the Obsidian post
+  template never reached the page. This captures the plugin's seo tag output,
+  then swaps those two values in where a page sets them. Every other tag is
+  the plugin's, unchanged.
+
+  seo_title replaces <title> whole (no " | site title" suffix), og:title,
+  twitter:title and the JSON-LD headline. seo_description replaces the meta
+  description, og:description and the JSON-LD description. Both are used as
+  written: whitespace collapsed, & < > " escaped, not run through Markdown.
+  Apostrophes stay as typed; escaping them would put a literal &#39; into
+  the JSON-LD, which is not HTML-decoded.
+
+  If a plugin upgrade changes the tag markup, the swap stops matching and
+  _tests/meta.test.mjs fails.
+{%- endcomment -%}
+{%- capture seo_head -%}{% seo %}{%- endcapture -%}
+
+{%- assign seo_new = page.seo_title | normalize_whitespace | replace: "&", "&amp;" | replace: "<", "&lt;" | replace: ">", "&gt;" | replace: '"', "&quot;" -%}
+{%- if seo_new != "" -%}
+  {%- if seo_head contains "<title>" -%}
+    {%- assign seo_old = seo_head | split: "<title>" | last | split: "</title>" | first -%}
+    {%- capture seo_from -%}<title>{{ seo_old }}</title>{%- endcapture -%}
+    {%- capture seo_to -%}<title>{{ seo_new }}</title>{%- endcapture -%}
+    {%- assign seo_head = seo_head | replace: seo_from, seo_to -%}
+  {%- endif -%}
+  {%- assign seo_mark = '<meta property="og:title" content="' -%}
+  {%- if seo_head contains seo_mark -%}
+    {%- assign seo_old = seo_head | split: seo_mark | last | split: '" />' | first -%}
+    {%- capture seo_from -%}<meta property="og:title" content="{{ seo_old }}" />{%- endcapture -%}
+    {%- capture seo_to -%}<meta property="og:title" content="{{ seo_new }}" />{%- endcapture -%}
+    {%- assign seo_head = seo_head | replace: seo_from, seo_to -%}
+    {%- capture seo_from -%}<meta property="twitter:title" content="{{ seo_old }}" />{%- endcapture -%}
+    {%- capture seo_to -%}<meta property="twitter:title" content="{{ seo_new }}" />{%- endcapture -%}
+    {%- assign seo_head = seo_head | replace: seo_from, seo_to -%}
+    {%- capture seo_from -%}"headline":{{ seo_old | jsonify }}{%- endcapture -%}
+    {%- capture seo_to -%}"headline":{{ seo_new | jsonify }}{%- endcapture -%}
+    {%- assign seo_head = seo_head | replace: seo_from, seo_to -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign seo_new = page.seo_description | normalize_whitespace | replace: "&", "&amp;" | replace: "<", "&lt;" | replace: ">", "&gt;" | replace: '"', "&quot;" -%}
+{%- if seo_new != "" -%}
+  {%- assign seo_mark = '<meta name="description" content="' -%}
+  {%- if seo_head contains seo_mark -%}
+    {%- assign seo_old = seo_head | split: seo_mark | last | split: '" />' | first -%}
+    {%- capture seo_from -%}<meta name="description" content="{{ seo_old }}" />{%- endcapture -%}
+    {%- capture seo_to -%}<meta name="description" content="{{ seo_new }}" />{%- endcapture -%}
+    {%- assign seo_head = seo_head | replace: seo_from, seo_to -%}
+    {%- capture seo_from -%}<meta property="og:description" content="{{ seo_old }}" />{%- endcapture -%}
+    {%- capture seo_to -%}<meta property="og:description" content="{{ seo_new }}" />{%- endcapture -%}
+    {%- assign seo_head = seo_head | replace: seo_from, seo_to -%}
+    {%- capture seo_from -%}"description":{{ seo_old | jsonify }}{%- endcapture -%}
+    {%- capture seo_to -%}"description":{{ seo_new | jsonify }}{%- endcapture -%}
+    {%- assign seo_head = seo_head | replace: seo_from, seo_to -%}
+  {%- endif -%}
+{%- endif -%}
+
+{{- seo_head -}}

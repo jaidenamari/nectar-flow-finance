@@ -1,8 +1,10 @@
 // The web fonts are hosted on the site (assets/fonts/, declared in
 // _sass/_fonts.scss). Nothing may load from Google Fonts again: its
 // stylesheet blocked rendering on every page. Every @font-face src must be
-// a file in the build, every page that loads main.css must preload the body
-// face, and Inter must reach weight 700 (bold table first columns and totals).
+// a file in the build, every page with a <head> must preload the body face
+// and carry the site CSS inline exactly once (<style id="site-css">, built
+// from _includes/site.scss), and Inter must reach weight 700 (bold table
+// first columns and totals).
 // Reads the built _site. Build the site first: bundle exec jekyll build
 // Run: node --test '_tests/**/*.test.mjs'
 import { test } from 'node:test';
@@ -62,14 +64,28 @@ test('every @font-face src is a file in the build', () => {
   }
 });
 
-test('every page that loads main.css preloads the body face', () => {
-  const missing = walk(site, ['.html'])
-    .filter((f) => {
-      const html = readFileSync(f, 'utf8');
-      return html.includes('assets/css/main.css') && !html.includes(PRELOAD);
-    })
+// The site CSS is inlined in every page, so no page links main.css; check
+// every built page that has a <head>.
+const pages = () =>
+  walk(site, ['.html']).filter((f) => readFileSync(f, 'utf8').includes('<head>'));
+
+test('there are built pages with a <head>', () => {
+  assert.ok(pages().length > 0, 'no built HTML page has a <head>: run bundle exec jekyll build');
+});
+
+test('every page with a <head> preloads the body face', () => {
+  const missing = pages()
+    .filter((f) => !readFileSync(f, 'utf8').includes(PRELOAD))
     .map((f) => relative(site, f));
-  assert.deepEqual(missing, [], `add ${PRELOAD} before the main.css link in _includes/head.html`);
+  assert.deepEqual(missing, [], `add ${PRELOAD} to _includes/head.html`);
+});
+
+test('every page with a <head> has the site CSS inline exactly once', () => {
+  const wrong = pages()
+    .map((f) => [relative(site, f), (readFileSync(f, 'utf8').match(/<style id="site-css">/g) || []).length])
+    .filter(([, n]) => n !== 1)
+    .map(([f, n]) => `${f}: ${n} blocks`);
+  assert.deepEqual(wrong, [], 'each page needs one <style id="site-css"> from _includes/head.html');
 });
 
 test("Inter's face covers weight 700", () => {

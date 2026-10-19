@@ -1,0 +1,51 @@
+name: Feature or task
+description: New page, tool, improvement or business task
+labels: ["needs-triage"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Why it matters
+      description: Why this matters for readers or for the business
+      placeholder: Readers searching for X can't find...
+    validations:
+      required: true
+
+  - type: input
+    id: milestone
+    attributes:
+      label: Milestone
+      description: The milestone and exit metric this moves, if known
+      placeholder: "B3: monthly search impressions"
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What is true when this is done. Each item should be checkable on the live site
+      placeholder: |
+        - A reader can do X
+        - The page shows Y, matching the cited source
+    validations:
+      required: true
+
+  - type: textarea
+    id: developer_checklist
+    attributes:
+      label: Developer checklist
+      value: |
+        Complete before work begins.
+
+        - [ ] **Approach and size**
+          - Write the size of the work. If it is too large, split it
+          - Write how you plan to make the change
+        - [ ] **Validation plan**
+          - Write the checks that prove each acceptance item, runnable before merge
+          - Note the regression risk and edge cases to cover
+        - [ ] **Production check**
+          - Write what the live check confirms after release
+          - Note the metric to watch afterwards
+    validations:
+      required: false

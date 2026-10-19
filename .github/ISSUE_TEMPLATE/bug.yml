@@ -1,0 +1,63 @@
+name: Bug
+description: Something on the site is wrong or broken
+labels: ["bug", "needs-triage"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: URL of the affected page, if there is one
+      placeholder: https://nectarflowfinance.com/...
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happens, and why it is a problem for readers
+      placeholder: When a reader does X, Y happens...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Keep it short and reliable
+      placeholder: |
+        1. Open...
+        2. Enter...
+        3. See...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: How it should work
+      description: The expected behavior. For a figure, name the source it should match
+      placeholder: |
+        - When a reader does X, Y should happen
+        - The figure should match the cited source
+    validations:
+      required: true
+
+  - type: textarea
+    id: developer_checklist
+    attributes:
+      label: Developer checklist
+      value: |
+        Complete before work begins.
+
+        - [ ] **Scope and fix plan**
+          - Write the expected scope of the fix. If it is larger than expected, split it
+          - Write how you plan to fix it
+        - [ ] **Validation plan**
+          - Write the check that proves the fix, runnable before merge
+          - Note the regression risk and edge cases to cover
+        - [ ] **Production check**
+          - Write what the live check confirms after release
+          - Note anything to watch afterwards
+    validations:
+      required: false

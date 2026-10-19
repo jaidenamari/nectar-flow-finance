@@ -2,15 +2,18 @@
 # Prepare post images for the web. Run from anywhere: _scripts/images
 #
 # For every JPG/PNG in assets/images/ (except the site background):
-#   - writes <name>-740.webp and <name>-1480.webp next to it,
+#   - writes <name>-740.webp and <name>-1480.webp next to it; a source
+#     narrower than 1480 px gets the widths it reaches without upscaling
+#     plus <name>-<width>.webp at its own width (1000 px: -740 and -1000;
+#     600 px: -600 only), and _layouts/post.html lists the same files,
 #   - resizes the original in place to at most 1480 px wide (the fallback),
 #   - records its path, width and height in _data/images.yml.
 #
 # GitHub Pages runs no custom plugins, so this runs before commit.
 # Encoders use their default quality. Safe to run again: an image that is
-# already at most 1480 px wide and has both WebP files is left alone. To
+# already at most 1480 px wide and has its WebP files is left alone. To
 # redo one (for example after replacing it with a new image of the same
-# name and width), delete its two .webp files and run this again.
+# name and width), delete its .webp files and run this again.
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -37,18 +40,22 @@ for src in assets/images/*.jpg assets/images/*.jpeg assets/images/*.png; do
   base=${src%.*}
   read -r w h < <(dims "$src")
 
-  if (( w < FALLBACK_WIDTH )); then
-    echo "images: skip $src: $w px wide, needs at least $FALLBACK_WIDTH px; supply a larger source" >&2
-    continue
-  fi
+  # The WebP widths this source reaches without upscaling, plus its own
+  # width below the largest (a plain list, not an array: bash 3.2 errors
+  # on an empty array under set -u).
+  sizes=""
+  for size in "${WIDTHS[@]}"; do
+    if (( size <= w )); then sizes="$sizes $size"; fi
+  done
+  if (( w < FALLBACK_WIDTH )) && [[ "$sizes " != *" $w "* ]]; then sizes="$sizes $w"; fi
 
   missing=0
-  for size in "${WIDTHS[@]}"; do [[ -e "$base-$size.webp" ]] || missing=1; done
+  for size in $sizes; do [[ -e "$base-$size.webp" ]] || missing=1; done
 
   # Encode WebP from the full-size source (before the in-place resize), so
   # each file is compressed once from the best pixels available.
   if (( missing || w > FALLBACK_WIDTH )); then
-    for size in "${WIDTHS[@]}"; do
+    for size in $sizes; do
       magick "$src" -resize "${size}x" "$tmp/resized.png"
       cwebp -quiet "$tmp/resized.png" -o "$base-$size.webp"
       echo "images: wrote $base-$size.webp"
@@ -72,5 +79,11 @@ mkdir -p "$(dirname "$DATA")"
   echo "# Fallback image size per path, used by _layouts/post.html."
   # ${arr[@]+...} keeps bash 3.2 (macOS) quiet under set -u when empty.
   for e in ${entries[@]+"${entries[@]}"}; do echo "$e"; done
-} > "$DATA"
-echo "images: wrote $DATA (${#entries[@]} images)"
+} > "$tmp/images.yml"
+# Replace it only on change: a newer mtime marks _site stale for the tests.
+if cmp -s "$tmp/images.yml" "$DATA"; then
+  echo "images: $DATA unchanged (${#entries[@]} images)"
+else
+  mv "$tmp/images.yml" "$DATA"
+  echo "images: wrote $DATA (${#entries[@]} images)"
+fi

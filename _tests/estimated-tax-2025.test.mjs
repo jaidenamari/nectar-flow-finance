@@ -1,15 +1,15 @@
 // Tests the 2025 estimated tax calculator's safe-harbor logic.
 // Runs the page's own <script> from the built _site file against a stub
 // document. Build the site first: bundle exec jekyll build
-// Run: node --test _tests/
+// Run: node --test '_tests/**/*.test.mjs'
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
-import { fileURLToPath } from 'node:url';
+import { builtSite } from './built-site.mjs';
 
-const siteDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '_site');
+const siteDir = builtSite();
 const PAGE = 'estimated-tax-calculator.html';
 
 function findPage(dir) {
